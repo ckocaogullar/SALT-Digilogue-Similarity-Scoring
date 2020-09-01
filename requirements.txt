@@ -1,0 +1,10 @@
+certifi==2020.6.20
+chardet==3.0.4
+html2text==2020.1.16
+idna==2.10
+lxml==4.5.2
+mypy-extensions==0.4.3
+pycurl==7.43.0.5
+requests==2.24.0
+urllib3==1.25.10
+wptools==0.4.17

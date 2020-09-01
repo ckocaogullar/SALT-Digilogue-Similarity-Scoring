@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<dublin_core schema="dc">
+  <dcvalue element="date" qualifier="accessioned">2018-09-16T15:20:16Z</dcvalue>
+  <dcvalue element="date" qualifier="available">2018-09-16T15:20:16Z</dcvalue>
+  <dcvalue element="identifier" qualifier="none" language="">TMKTH0211</dcvalue>
+  <dcvalue element="identifier" qualifier="other" language="">126249</dcvalue>
+  <dcvalue element="identifier" qualifier="uri">https:&#x2F;&#x2F;archives.saltresearch.org&#x2F;handle&#x2F;123456789&#x2F;92043</dcvalue>
+  <dcvalue element="description" qualifier="provenance" language="en">Made&#x20;available&#x20;in&#x20;DSpace&#x20;on&#x20;2018-09-16T15:20:16Z&#x20;(GMT).&#x20;No.&#x20;of&#x20;bitstreams:&#x20;1&#x0A;TMKTH0211.jpg:&#x20;1364025&#x20;bytes,&#x20;checksum:&#x20;79da96ac4054286ddbd241563d18fff0&#x20;(MD5)</dcvalue>
+  <dcvalue element="format" qualifier="none" language="">15,1-10,1&#x20;cm</dcvalue>
+  <dcvalue element="format" qualifier="none" language="">Renkli&#x20;baskı&#x20;-&#x20;Colored&#x20;printed</dcvalue>
+  <dcvalue element="rights" qualifier="none" language="">Open&#x20;Access</dcvalue>
+  <dcvalue element="title" qualifier="none" language="">Çivi&#x20;yazısı&#x20;-&#x20;Cuneiform&#x20;script</dcvalue>
+  <dcvalue element="type" qualifier="none" language="">Fotoğraf&#x20;-&#x20;Photograph</dcvalue>
+  <dcvalue element="note" qualifier="internal" language="">Kayıhan&#x20;Türköz&#39;ün&#x20;fotoğrafları,&#x20;03.05.2016&#x20;tarihinde&#x20;Librarie&#x20;de&#x20;Péra&#39;dan&#x20;satın&#x20;alındı.&#x20;Fotoğraf&#x20;adedi:&#x20;472.&#x20;Fatura&#x20;tutarı:&#x20;610,65TL</dcvalue>
+  <dcvalue element="location" qualifier="none" language="">SALT&#x20;Research</dcvalue>
+  <dcvalue element="identifier" qualifier="projectcode" language="">KT</dcvalue>
+  <dcvalue element="identifier" qualifier="pid" language="">4321767</dcvalue>
+  <dcvalue element="catalogedby" qualifier="none" language="">Masum&#x20;Yıldız</dcvalue>
+  <dcvalue element="date" qualifier="cataloged" language="">2016-09-17</dcvalue>
+  <dcvalue element="date" qualifier="acquisition" language="">2016-05-03</dcvalue>
+  <dcvalue element="format" qualifier="numberofscans" language="">1</dcvalue>
+  <dcvalue element="format" qualifier="numberofpages" language="">1</dcvalue>
+  <dcvalue element="format" qualifier="quality" language="">15,1-10,1&#x20;cm</dcvalue>
+</dublin_core>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<dublin_core schema="dc">
+  <dcvalue element="coverage" qualifier="spatial" language="">Beyoğlu,&#x20;Istanbul</dcvalue>
+  <dcvalue element="creator" qualifier="none" language="">Eliza&#x20;(Bulise)&#x20;Day</dcvalue>
+  <dcvalue element="date" qualifier="accessioned">2018-08-16T14:31:00Z</dcvalue>
+  <dcvalue element="date" qualifier="available">2018-08-16T14:31:00Z</dcvalue>
+  <dcvalue element="date" qualifier="issued" language="">1964-09</dcvalue>
+  <dcvalue element="identifier" qualifier="none" language="">EDH0008</dcvalue>
+  <dcvalue element="identifier" qualifier="other" language="">125006</dcvalue>
+  <dcvalue element="identifier" qualifier="uri">https:&#x2F;&#x2F;archives.saltresearch.org&#x2F;handle&#x2F;123456789&#x2F;10951</dcvalue>
+  <dcvalue element="description" qualifier="provenance" language="en">Made&#x20;available&#x20;in&#x20;DSpace&#x20;on&#x20;2018-08-16T14:31:00Z&#x20;(GMT).&#x20;No.&#x20;of&#x20;bitstreams:&#x20;8&#x0A;EDH0008001.jpg:&#x20;1203386&#x20;bytes,&#x20;checksum:&#x20;dcb828cc56b0743a7dcff2b0fde514a1&#x20;(MD5)&#x0A;EDH0008002.jpg:&#x20;1541680&#x20;bytes,&#x20;checksum:&#x20;693af18a460a6c38f301c5696cb6570d&#x20;(MD5)&#x0A;EDH0008003.jpg:&#x20;1100215&#x20;bytes,&#x20;checksum:&#x20;471abe7c54754c1dcda5895f32da3098&#x20;(MD5)&#x0A;EDH0008004.jpg:&#x20;1354689&#x20;bytes,&#x20;checksum:&#x20;1c7f492a5e1c41b39b8ed1ab0678e86e&#x20;(MD5)&#x0A;EDH0008005.jpg:&#x20;1524694&#x20;bytes,&#x20;checksum:&#x20;6160b8b926c6e6c2f4c35c475ec95e03&#x20;(MD5)&#x0A;EDH0008006.jpg:&#x20;1162401&#x20;bytes,&#x20;checksum:&#x20;a5ec832133c53fcac0744a314029a09a&#x20;(MD5)&#x0A;EDH0008007.jpg:&#x20;1460014&#x20;bytes,&#x20;checksum:&#x20;665e40db72dda8853a665d52998d4bb1&#x20;(MD5)&#x0A;EDH0008008.jpg:&#x20;1996607&#x20;bytes,&#x20;checksum:&#x20;ae93f7c6affc482960bb3ddf64d3b330&#x20;(MD5)&#x0A;&#x20;&#x20;Previous&#x20;issue&#x20;date:&#x20;1964-09</dcvalue>
+  <dcvalue element="format" qualifier="none" language="">6-6&#x20;cm</dcvalue>
+  <dcvalue element="rights" qualifier="none" language="">Open&#x20;Access</dcvalue>
+  <dcvalue element="subject" qualifier="none" language="">Sanatçı</dcvalue>
+  <dcvalue element="subject" qualifier="none" language="">Han</dcvalue>
+  <dcvalue element="subject" qualifier="none" language="">İskiklat&#x20;Caddesi</dcvalue>
+  <dcvalue element="subject" qualifier="none" language="">Balkon</dcvalue>
+  <dcvalue element="subject" qualifier="none" language="">Trafik</dcvalue>
+  <dcvalue element="subject" qualifier="none" language="">Inn</dcvalue>
+  <dcvalue element="subject" qualifier="none" language="">Workshop</dcvalue>
+  <dcvalue element="subject" qualifier="none" language="">İstiklal&#x20;Street</dcvalue>
+  <dcvalue element="subject" qualifier="none" language="">Balcony</dcvalue>
+  <dcvalue element="subject" qualifier="none" language="">Traffic</dcvalue>
+  <dcvalue element="subject" qualifier="none" language="">Violin</dcvalue>
+  <dcvalue element="subject" qualifier="none" language="">Violinist</dcvalue>
+  <dcvalue element="subject" qualifier="none" language="">Artist</dcvalue>
+  <dcvalue element="title" qualifier="none" language="">Ayla&#x20;Erduran,&#x20;Narmanlı&#x20;Han’daki&#x20;Aliye&#x20;Berger’in&#x20;atölyesinin&#x20;balkonunda&#x20;keman&#x20;çalarken&#x20;-&#x20;Ayla&#x20;Erduran&#x20;playing&#x20;the&#x20;violin&#x20;on&#x20;the&#x20;balcony&#x20;of&#x20;Aliye&#x20;Berger&#39;s&#x20;studio&#x2F;atelier&#x20;in&#x20;Narmanlı&#x20;Inn</dcvalue>
+  <dcvalue element="type" qualifier="none" language="">Negatif&#x20;film&#x20;-&#x20;Negative&#x20;film</dcvalue>
+  <dcvalue element="note" qualifier="internal" language="">Arşiv,&#x20;01.11.2015&#x20;tarihinde&#x20;Amaç&#x20;Bükmen&#x20;ile&#x20;T.&#x20;Garanti&#x20;Bankası&#x20;A.Ş.&#x20;Garanti&#x20;Kültür&#x20;A.Ş.&#x20;arasında&#x20;imzalanan&#x20;protokol&#x20;ile&#x20;satın&#x20;alındı.</dcvalue>
+  <dcvalue element="location" qualifier="none" language="">SALT&#x20;Research</dcvalue>
+  <dcvalue element="identifier" qualifier="projectcode" language="">ED</dcvalue>
+  <dcvalue element="identifier" qualifier="pid" language="">4249812</dcvalue>
+  <dcvalue element="catalogedby" qualifier="none" language="">Masum&#x20;Yıldız</dcvalue>
+  <dcvalue element="date" qualifier="cataloged" language="">2016-01-26</dcvalue>
+  <dcvalue element="date" qualifier="acquisition" language="">2015-11-01</dcvalue>
+  <dcvalue element="format" qualifier="numberofscans" language="">8</dcvalue>
+  <dcvalue element="format" qualifier="quality" language="">6-6&#x20;cm</dcvalue>
+</dublin_core>

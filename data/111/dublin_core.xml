@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<dublin_core schema="dc">
+  <dcvalue element="creator" qualifier="none" language="">Gültekin&#x20;Çizgen</dcvalue>
+  <dcvalue element="date" qualifier="accessioned">2018-09-16T08:54:46Z</dcvalue>
+  <dcvalue element="date" qualifier="available">2018-09-16T08:54:46Z</dcvalue>
+  <dcvalue element="identifier" qualifier="none" language="">TMGCH0148</dcvalue>
+  <dcvalue element="identifier" qualifier="other" language="">118934,&#x20;118935</dcvalue>
+  <dcvalue element="identifier" qualifier="uri">https:&#x2F;&#x2F;archives.saltresearch.org&#x2F;handle&#x2F;123456789&#x2F;87145</dcvalue>
+  <dcvalue element="description" qualifier="provenance" language="en">Made&#x20;available&#x20;in&#x20;DSpace&#x20;on&#x20;2018-09-16T08:54:46Z&#x20;(GMT).&#x20;No.&#x20;of&#x20;bitstreams:&#x20;2&#x0A;TMGCH0148001.jpg:&#x20;559327&#x20;bytes,&#x20;checksum:&#x20;b3ccd61c7eba459bb0752729e91fa24b&#x20;(MD5)&#x0A;TMGCH0148002.jpg:&#x20;680522&#x20;bytes,&#x20;checksum:&#x20;093c6da0b8af76786cb3113493eb6b1f&#x20;(MD5)</dcvalue>
+  <dcvalue element="format" qualifier="none" language="">6x6&#x20;cm</dcvalue>
+  <dcvalue element="relation" qualifier="none" language="">TMGCH0026&#x20;AHESK006</dcvalue>
+  <dcvalue element="rights" qualifier="none" language="">Open&#x20;Access</dcvalue>
+  <dcvalue element="subject" qualifier="none" language="">Porsuk&#x20;Çayı</dcvalue>
+  <dcvalue element="subject" qualifier="none" language="">Porsuk&#x20;Creek</dcvalue>
+  <dcvalue element="subject" qualifier="none" language="">Eskişehir</dcvalue>
+  <dcvalue element="title" qualifier="none" language="">Eskişehirin&#x20;genel&#x20;görünümü&#x20;-&#x20;A&#x20;general&#x20;view&#x20;of&#x20;Eskişehir</dcvalue>
+  <dcvalue element="note" qualifier="internal" language="">Gültekin&#x20;Çizgen&#x20;Arşivi,&#x20;Garanti&#x20;Bankası,&#x20;Garanti&#x20;Kültür&#x20;ile&#x20;Gültekin&#x20;Çizgen&#x20;arasında&#x20;2015&#x20;ve&#x20;2016&#x20;yıllarında&#x20;imzalanan&#x20;sözleşmeler&#x20;ile&#x20;satın&#x20;alınmıştır.</dcvalue>
+  <dcvalue element="location" qualifier="none" language="">SALT&#x20;Research</dcvalue>
+  <dcvalue element="identifier" qualifier="pid" language="">4422122</dcvalue>
+  <dcvalue element="catalogedby" qualifier="none" language="">Ezgi&#x20;Mutluer</dcvalue>
+  <dcvalue element="date" qualifier="cataloged" language="">2018-06-27</dcvalue>
+  <dcvalue element="format" qualifier="numberofscans" language="">2</dcvalue>
+  <dcvalue element="format" qualifier="numberofpages" language="">2</dcvalue>
+  <dcvalue element="format" qualifier="quality" language="">6x6&#x20;cm</dcvalue>
+  <dcvalue element="rights" qualifier="holder" language="">SALT&#x20;Araştırma&#x20;-&#x20;SALT&#x20;Research</dcvalue>
+</dublin_core>

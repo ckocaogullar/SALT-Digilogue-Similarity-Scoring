@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<dublin_core schema="dc">
+  <dcvalue element="date" qualifier="accessioned">2018-09-19T10:17:27Z</dcvalue>
+  <dcvalue element="date" qualifier="available">2018-09-19T10:17:27Z</dcvalue>
+  <dcvalue element="identifier" qualifier="none">EMH005</dcvalue>
+  <dcvalue element="identifier" qualifier="other">126425</dcvalue>
+  <dcvalue element="identifier" qualifier="uri">https:&#x2F;&#x2F;archives.saltresearch.org&#x2F;handle&#x2F;123456789&#x2F;97235</dcvalue>
+  <dcvalue element="description" qualifier="provenance" language="en">Made&#x20;available&#x20;in&#x20;DSpace&#x20;on&#x20;2018-09-19T10:17:27Z&#x20;(GMT).&#x20;No.&#x20;of&#x20;bitstreams:&#x20;1&#x0D;&#x0A;EMH005.jpg:&#x20;1310574&#x20;bytes,&#x20;checksum:&#x20;1263342511ef8afc52c4f48e13bf2928&#x20;(MD5)</dcvalue>
+  <dcvalue element="format" qualifier="none">11-18&#x20;cm</dcvalue>
+  <dcvalue element="format" qualifier="none">Baskı</dcvalue>
+  <dcvalue element="format" qualifier="none">Siyah&#x20;Beyaz&#x20;-&#x20;Print</dcvalue>
+  <dcvalue element="format" qualifier="none">Black&amp;White</dcvalue>
+  <dcvalue element="rights" qualifier="none">Open&#x20;Access</dcvalue>
+  <dcvalue element="subject" qualifier="none">Kara&#x20;tahta</dcvalue>
+  <dcvalue element="subject" qualifier="none">Blackboard</dcvalue>
+  <dcvalue element="subject" qualifier="none">Eğitim</dcvalue>
+  <dcvalue element="subject" qualifier="none">Education</dcvalue>
+  <dcvalue element="title" qualifier="none">Bir&#x20;ilkokulda&#x20;öğrenci&#x20;tahtaya&#x20;yazı&#x20;yazarken&#x20;-&#x20;Student&#x20;writing&#x20;on&#x20;a&#x20;blackboard&#x20;in&#x20;a&#x20;primary&#x20;school&#x20;classroom</dcvalue>
+  <dcvalue element="type" qualifier="none">Fotoğraf&#x20;-&#x20;Photograph</dcvalue>
+  <dcvalue element="note" qualifier="internal">23.05.2017&#39;de&#x20;Mustafa&#x20;Celalüddin&#x20;Ekber&#x20;And&#39;tan&#x20;satın&#x20;alındı.&#x20;(Peyci.com)&#x20;Fatura&#x20;tutarı:&#x20;1.241,00TL&#x20;Fatura&#x20;no:&#x20;78.&#x20;&#x20;Lot&#x20;tutarı:&#x20;184,00TL</dcvalue>
+  <dcvalue element="location" qualifier="none">SALT&#x20;Research</dcvalue>
+  <dcvalue element="identifier" qualifier="pid">4354991</dcvalue>
+  <dcvalue element="catalogedby" qualifier="none">Masum&#x20;Yıldız</dcvalue>
+  <dcvalue element="date" qualifier="cataloged">2017-06-02</dcvalue>
+  <dcvalue element="date" qualifier="acquisition">2017-05-23</dcvalue>
+  <dcvalue element="format" qualifier="numberofscans">1</dcvalue>
+  <dcvalue element="format" qualifier="numberofpages">1</dcvalue>
+  <dcvalue element="format" qualifier="quality">11-18&#x20;cm</dcvalue>
+</dublin_core>

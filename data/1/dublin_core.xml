@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<dublin_core schema="dc">
+  <dcvalue element="coverage" qualifier="spatial" language="">Beyoğlu,&#x20;Istanbul</dcvalue>
+  <dcvalue element="date" qualifier="accessioned">2018-08-16T14:30:53Z</dcvalue>
+  <dcvalue element="date" qualifier="available">2018-08-16T14:30:53Z</dcvalue>
+  <dcvalue element="date" qualifier="issued" language="">1967</dcvalue>
+  <dcvalue element="identifier" qualifier="none" language="">EDH0001</dcvalue>
+  <dcvalue element="identifier" qualifier="other" language="">124999</dcvalue>
+  <dcvalue element="identifier" qualifier="uri">https:&#x2F;&#x2F;archives.saltresearch.org&#x2F;handle&#x2F;123456789&#x2F;10944</dcvalue>
+  <dcvalue element="description" qualifier="provenance" language="en">Made&#x20;available&#x20;in&#x20;DSpace&#x20;on&#x20;2018-08-16T14:30:53Z&#x20;(GMT).&#x20;No.&#x20;of&#x20;bitstreams:&#x20;12&#x0A;EDH0001001.jpg:&#x20;1212409&#x20;bytes,&#x20;checksum:&#x20;5e228a1ef812a05dcbda8f8c804866f4&#x20;(MD5)&#x0A;EDH0001002.jpg:&#x20;1304701&#x20;bytes,&#x20;checksum:&#x20;92cf56858cca99f13d6429945fdbf17a&#x20;(MD5)&#x0A;EDH0001003.jpg:&#x20;1234510&#x20;bytes,&#x20;checksum:&#x20;6ac35e12db3f3d3da207e98a305951c8&#x20;(MD5)&#x0A;EDH0001004.jpg:&#x20;1401734&#x20;bytes,&#x20;checksum:&#x20;621bdbec80da8620ee0598c4420159a7&#x20;(MD5)&#x0A;EDH0001005.jpg:&#x20;1421325&#x20;bytes,&#x20;checksum:&#x20;a4b4975a865af8012ea5493978c168fe&#x20;(MD5)&#x0A;EDH0001006.jpg:&#x20;1032562&#x20;bytes,&#x20;checksum:&#x20;4edfef0771edb1e22970887bc5ec8c00&#x20;(MD5)&#x0A;EDH0001007.jpg:&#x20;1159050&#x20;bytes,&#x20;checksum:&#x20;bbd61cea2b80a6d286de03b7ebefc39a&#x20;(MD5)&#x0A;EDH0001008.jpg:&#x20;986298&#x20;bytes,&#x20;checksum:&#x20;e1606f3c26fdc13911a6b679c8e343e1&#x20;(MD5)&#x0A;EDH0001009.jpg:&#x20;1391994&#x20;bytes,&#x20;checksum:&#x20;6f9b9f1b10641eeccd620b47bce436df&#x20;(MD5)&#x0A;EDH0001010.jpg:&#x20;1445884&#x20;bytes,&#x20;checksum:&#x20;92ca898742e493eddf56973e950e6617&#x20;(MD5)&#x0A;EDH0001011.jpg:&#x20;1370222&#x20;bytes,&#x20;checksum:&#x20;9dc1f4dcef2231b000abff54b1008297&#x20;(MD5)&#x0A;EDH0001012.jpg:&#x20;1342514&#x20;bytes,&#x20;checksum:&#x20;aa8f4dbe3f082b46899b3856959a43aa&#x20;(MD5)&#x0A;&#x20;&#x20;Previous&#x20;issue&#x20;date:&#x20;1967</dcvalue>
+  <dcvalue element="format" qualifier="none" language="">6-6&#x20;cm</dcvalue>
+  <dcvalue element="rights" qualifier="none" language="">Open&#x20;Access</dcvalue>
+  <dcvalue element="subject" qualifier="none" language="">Çökmüş&#x20;tavan</dcvalue>
+  <dcvalue element="subject" qualifier="none" language="">Piyano</dcvalue>
+  <dcvalue element="subject" qualifier="none" language="">Kırık&#x20;pencere</dcvalue>
+  <dcvalue element="subject" qualifier="none" language="">Harap</dcvalue>
+  <dcvalue element="subject" qualifier="none" language="">Collapsed&#x20;ceiling</dcvalue>
+  <dcvalue element="subject" qualifier="none" language="">Piano</dcvalue>
+  <dcvalue element="subject" qualifier="none" language="">Broken&#x20;window</dcvalue>
+  <dcvalue element="subject" qualifier="none" language="">Ruin</dcvalue>
+  <dcvalue element="title" qualifier="none" language="">Narmanlı&#x20;Han&#39;da&#x20;yangın&#x20;-&#x20;Fire&#x20;in&#x20;Narmanlı&#x20;Inn</dcvalue>
+  <dcvalue element="type" qualifier="none" language="">Negatif&#x20;film&#x20;-&#x20;Negative&#x20;film</dcvalue>
+  <dcvalue element="note" qualifier="internal" language="">Arşiv,&#x20;01.11.2015&#x20;tarihinde&#x20;Amaç&#x20;Bükmen&#x20;ile&#x20;T.&#x20;Garanti&#x20;Bankası&#x20;A.Ş.&#x20;Garanti&#x20;Kültür&#x20;A.Ş.&#x20;arasında&#x20;imzalanan&#x20;protokol&#x20;ile&#x20;satın&#x20;alındı.</dcvalue>
+  <dcvalue element="location" qualifier="none" language="">SALT&#x20;Research</dcvalue>
+  <dcvalue element="identifier" qualifier="projectcode" language="">ED</dcvalue>
+  <dcvalue element="identifier" qualifier="pid" language="">4249737</dcvalue>
+  <dcvalue element="catalogedby" qualifier="none" language="">Masum&#x20;Yıldız</dcvalue>
+  <dcvalue element="date" qualifier="cataloged" language="">2016-01-26</dcvalue>
+  <dcvalue element="date" qualifier="acquisition" language="">2015-11-01</dcvalue>
+  <dcvalue element="format" qualifier="numberofscans" language="">12</dcvalue>
+  <dcvalue element="format" qualifier="quality" language="">6-6&#x20;cm</dcvalue>
+</dublin_core>
