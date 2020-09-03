@@ -126,5 +126,133 @@
             "subject": "Eğitim, Education, ",
             "title": "Sarar İlkokulu'nda uçak model dersi - Airplane model lesson at Sarar Primary School"
         }
+    },
+    "80225": {
+        "salt_metadata": {
+            "spatial": "Yeşilköy, İstanbul",
+            "subject": "Yeşilköy, Bakırköy, İstanbul, ",
+            "title": "İstanbul Atatürk Havalimanı - İstanbul Atatürk Airport"
+        }
+    },
+    "97235": {
+        "salt_metadata": {
+            "subject": "Kara tahta, Blackboard, Eğitim, Education, ",
+            "title": "Bir ilkokulda öğrenci tahtaya yazı yazarken - Student writing on a blackboard in a primary school classroom"
+        }
+    },
+    "87145": {
+        "salt_metadata": {
+            "subject": "Porsuk Çayı, Porsuk Creek, Eskişehir, ",
+            "title": "Eskişehirin genel görünümü - A general view of Eskişehir"
+        },
+        "search_res": {
+            "A": [
+                "Sesli harfler"
+            ]
+        }
+    },
+    "10944": {
+        "salt_metadata": {
+            "spatial": "Beyoğlu, Istanbul",
+            "subject": "Çökmüş tavan, Piyano, Kırık pencere, Harap, Collapsed ceiling, Piano, Broken window, Ruin, ",
+            "title": "Narmanlı Han'da yangın - Fire in Narmanlı Inn"
+        },
+        "search_res": {
+            "Narmanlı Han": [
+                "İstiklal Caddesi",
+                "İstanbul'daki hanlar",
+                "Beyoğlu'ndaki yapılar",
+                "1831'de tamamlanan yapılar"
+            ]
+        }
+    },
+    "10951": {
+        "salt_metadata": {
+            "spatial": "Beyoğlu, Istanbul",
+            "subject": "Sanatçı, Han, İskiklat Caddesi, Balkon, Trafik, Inn, Workshop, İstiklal Street, Balcony, Traffic, Violin, Violinist, Artist, ",
+            "title": "Ayla Erduran, Narmanlı Han’daki Aliye Berger’in atölyesinin balkonunda keman çalarken - Ayla Erduran playing the violin on the balcony of Aliye Berger's studio/atelier in Narmanlı Inn"
+        },
+        "search_res": {
+            "Ayla Erduran": [
+                "1934 doğumlular",
+                "Türk kemancılar",
+                "Devlet Sanatçıları",
+                "İstanbul doğumlu müzisyenler",
+                "Cumhurbaşkanlığı Senfoni Orkestrası sanatçıları",
+                "Devlet Senfoni Orkestrası sanatçıları",
+                "Yaşayan insanlar"
+            ],
+            "Aliye Berger": [
+                "1903 doğumlular",
+                "1974 yılında ölenler",
+                "20. yüzyıl Türk ressamları",
+                "Notre Dame de Sion Fransız Lisesi'nde öğrenim görenler",
+                "Şakir Paşa ailesi",
+                "İstanbul doğumlu ressamlar",
+                "İstanbul'da ölenler",
+                "Türk gravür sanatçıları",
+                "Büyükada Mezarlığı'na defnedilenler",
+                "Resim aranan kişiler"
+            ]
+        }
+    },
+    "31745": {
+        "salt_metadata": {
+            "title": "Bülent Arel'in oğlu Emre Arel'in çocukluk fotoğrafı"
+        },
+        "search_res": {
+            "Bülent Arel": [
+                "1919 doğumlular",
+                "İstanbul doğumlu besteciler",
+                "1990 yılında ölenler",
+                "20. yüzyıl klasik müzik bestecileri",
+                "20. yüzyıl Türk bestecileri",
+                "Galatasaray Lisesi'nde öğrenim görenler",
+                "Çağdaş Türk müziği bestecileri",
+                "Klasik müzik bestecileri",
+                "Amerika Birleşik Devletleri'nde kanserden ölenler",
+                "New York'ta ölenler",
+                "Amerika Birleşik Devletleri'ndeki Türk gurbetçiler",
+                "Türk elektronik müzisyenleri"
+            ]
+        }
+    },
+    "10974": {
+        "salt_metadata": {
+            "spatial": "Kadıköy, İstanbul",
+            "subject": "Ev, Piyano, Fotoğraflar, House, Piano, Photos, Steinway and Sons, ",
+            "title": "İdil Biret'in piyanosu - İdil Biret's piano"
+        },
+        "search_res": {
+            "İdil Biret": [
+                "1941 doğumlular",
+                "Ankara doğumlu müzisyenler",
+                "Türk piyanistler",
+                "Devlet Sanatçıları",
+                "Mutlak kulaklılar",
+                "Devlet Senfoni Orkestrası sanatçıları",
+                "Yaşayan insanlar",
+                "Türk klasik piyanistler"
+            ]
+        }
+    },
+    "92578": {
+        "salt_metadata": {
+            "spatial": "Beyoğlu, İstanbul",
+            "subject": "İstiklal Caddesi, Cadde-i Kebir, Grand Rue de Péra, Galatasaray, Balık Pazarı, Fish Bazaar, ",
+            "title": "Sahne Sokağı - Sahne Street"
+        }
+    },
+    "92043": {
+        "salt_metadata": {
+            "title": "Çivi yazısı - Cuneiform script"
+        }
+    },
+    "103289": {
+        "salt_metadata": {
+            "spatial": "Çankaya, Ankara",
+            "subject": "Eğitim, Education, ",
+            "title": "Sarar İlkokulu'nda uçak model dersi - Airplane model lesson at Sarar Primary School"
+        }
     }
 }

@@ -33,8 +33,8 @@ def get_and_write_metadata(foldername):
         else:
             data = dict()
         for child in root:
-            if child.attrib['element'] == 'identifier' and child.attrib['qualifier'] == 'none':
-                data_id = child.text
+            if child.attrib['qualifier'] == 'uri':
+                data_id = child.text.split('/')[-1]
                 data[data_id] = dict()
             if child.attrib['qualifier'] == 'spatial':
                 temp_data['spatial'] = child.text

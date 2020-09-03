@@ -63,14 +63,16 @@ def score_overall(data_id1, data_id2, data):
 def score_search_res(data_id1, data_id2, data):
     search_res1 = set(prepare_word_comparison('search_res', data_id1, data))
     search_res2 = set(prepare_word_comparison('search_res', data_id2, data))
-    return len(search_res1.intersection(search_res2))
+    total_words = len(search_res1) + len(search_res2)
+    return 0 if total_words == 0 else len(search_res1.intersection(search_res2)) / total_words
 
 # Calculates SALT Tagging based (T) similarity score by taking the 
 # common words occuring in the search results of a couple of items
 def score_salt_metadata(data_id1, data_id2, data):
     salt_metadata1 = set(prepare_word_comparison('salt_metadata', data_id1, data))
     salt_metadata2 = set(prepare_word_comparison('salt_metadata', data_id2, data))
-    return len(salt_metadata1.intersection(salt_metadata2))
+    total_words = len(salt_metadata1) + len(salt_metadata2)
+    return 0 if total_words == 0 else len(salt_metadata1.intersection(salt_metadata2)) / total_words
 
 # Splits sentences into words to prepare them for Search/Knowlege API based Connection (G) / SALT Tagging 
 # based (T) comparison
@@ -79,10 +81,11 @@ def prepare_word_comparison(tag, data_id, data):
     if tag in data[data_id].keys():
         for key in data[data_id][tag]:
             if type(data[data_id][tag][key]) == list:
+                print("yes list")
                 for item in data[data_id][tag][key]:
                     prepared += [x.strip().lower() for x in item.split()]
             else:
-                prepared += [x.strip().lower() for x in data[data_id][tag][key]]   
+                prepared += [x.strip().lower() for x in data[data_id][tag][key].split()]   
     return prepared
 
 # Generates mock similarity data for Visual Similarity (V), Image captioning/object recognition (C) and 
