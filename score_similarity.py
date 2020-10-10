@@ -29,25 +29,39 @@ def main():
         else:
             similarity_data = dict()
         for data_id1 in data_ids:
+            top_100_search = {-1: -1}
+            min_search_score = (-1, -1)
+            top_100_salt_metadata = {-1: -1}
+            min_salt_metadata_score = (-1, -1)
             for data_id2 in data_ids:
                 if not data_id1 == data_id2:
                     if data_id1 not in similarity_data.keys():
                         similarity_data[data_id1] = dict()
-                    if data_id2 not in similarity_data[data_id1].keys():
-                        similarity_data[data_id1][data_id2] = dict()
-                    vis_similarity, object_match, user_connection = generate_mock_scores(data_id1, data_id2)
-                    similarity_data[data_id1][data_id2]['vis_similarity'] = vis_similarity
-                    similarity_data[data_id1][data_id2]['object_match'] = object_match
-                    similarity_data[data_id1][data_id2]['user_connection'] = user_connection
-                    similarity_data[data_id1][data_id2]['search_res'] = score_search_res(data_id1, data_id2, data)
-                    similarity_data[data_id1][data_id2]['salt_metadata'] = score_salt_metadata(data_id1, data_id2, data)
-        # Overall scoring
-        for data_id1 in data_ids:
-            for data_id2 in data_ids:
-                if not data_id1 == data_id2:
-                    similarity_data[data_id1][data_id2]['overall'] = score_overall(data_id1, data_id2, similarity_data) 
+                    # if data_id2 not in similarity_data[data_id1].keys():
+                    #     similarity_data[data_id1][data_id2] = dict()
+                    min_search_score = adjust_top_100_score(data_id2, top_100_search, score_search_res(data_id1, data_id2, data), min_search_score)
+                    min_salt_metadata_score = adjust_top_100_score(data_id2, top_100_salt_metadata, score_search_res(data_id1, data_id2, data), min_salt_metadata_score)
+            similarity_data[data_id1]['search_res'] = top_100_search
+            similarity_data[data_id1]['salt_metadata'] = top_100_salt_metadata
+        ## OVERALL SCORING
+        # for data_id1 in data_ids:
+        #     for data_id2 in data_ids:
+        #         if not data_id1 == data_id2:
+        #             similarity_data[data_id1][data_id2]['overall'] = score_overall(data_id1, data_id2, similarity_data) 
+        
         json.dump(similarity_data, f, ensure_ascii=False, indent=4)
         f.truncate()
+
+def adjust_top_100_score(data_id, top_100_scores, score, min_score):
+    if len(top_100_scores) < 100:
+            top_100_scores[data_id] = score
+    elif score > min_score[1]:
+            print(top_100_scores)
+            del top_100_scores[min_score[0]]
+            top_100_scores[data_id] = score
+    min_s = min(top_100_scores.values())
+    min_score = (get_key(top_100_scores, min_s), min_s)
+    return min_score
 
 # Calculates overall Similarity Score for a given pair (S)
 def score_overall(data_id1, data_id2, data):
@@ -81,23 +95,31 @@ def prepare_word_comparison(tag, data_id, data):
     if tag in data[data_id].keys():
         for key in data[data_id][tag]:
             if type(data[data_id][tag][key]) == list:
-                print("yes list")
                 for item in data[data_id][tag][key]:
                     prepared += [x.strip().lower() for x in item.split()]
             else:
                 prepared += [x.strip().lower() for x in data[data_id][tag][key].split()]   
     return prepared
 
-# Generates mock similarity data for Visual Similarity (V), Image captioning/object recognition (C) and 
-# User Made Connection (U) categories.
-def generate_mock_scores(data_id1, data_id2):
-    # Randomly assigns a float between 1-0 to the visual similarity score
-    vis_similarity = random.random()
-    # Randomly assigns 1 or 0 to the visual similarity score
-    object_match = random.choice([0, 1])
-    # Randomly assigns an int between 0-10 to the user connection score
-    user_connection = random.randint(0, 10)
-    return vis_similarity, object_match, user_connection
+def get_key(my_dict, val): 
+    for key, value in my_dict.items(): 
+         if val == value: 
+             return key 
+  
+    return "key doesn't exist"
+
+#############
+## GENERATES MOCK DATA, NOT USING ANYMORE!!!
+# # Generates mock similarity data for Visual Similarity (V), Image captioning/object recognition (C) and 
+# # User Made Connection (U) categories.
+# def generate_mock_scores(data_id1, data_id2):
+#     # Randomly assigns a float between 1-0 to the visual similarity score
+#     vis_similarity = random.random()
+#     # Randomly assigns 1 or 0 to the visual similarity score
+#     object_match = random.choice([0, 1])
+#     # Randomly assigns an int between 0-10 to the user connection score
+#     user_connection = random.randint(0, 10)
+#     return vis_similarity, object_match, user_connection
 
 if __name__ == "__main__":
     main()

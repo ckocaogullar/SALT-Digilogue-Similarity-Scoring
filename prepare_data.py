@@ -16,15 +16,23 @@ import xml.etree.ElementTree as ET
 
 def main():
     for foldername in os.listdir('data/'):
-        if '.' not in foldername:
-            data_id = get_and_write_metadata(foldername)
+        search_and_write_results(foldername, 'data/' + foldername)
+        
+def search_and_write_results(foldername, path):
+    if '.' not in foldername:
+        if foldername.isnumeric():
+            data_id = get_and_write_metadata(path)
             categories = cumulative_search(data_id)
             write_search_results(data_id, categories)
+        else:
+            for foldername in os.listdir(path):
+                search_and_write_results(foldername, path + '/' + foldername)
+
 
 # Uses SALT-provided xml files to collect useful metadata
-def get_and_write_metadata(foldername):
+def get_and_write_metadata(path):
     temp_data = dict()
-    tree = ET.parse(f'data/{foldername}/dublin_core.xml')
+    tree = ET.parse(f'{path}/dublin_core.xml')
     root = tree.getroot()
     with open('data.json', 'r+', encoding='utf-8') as f:
         if len(f.readlines()) != 0:
@@ -42,6 +50,16 @@ def get_and_write_metadata(foldername):
                 temp_data['title'] = child.text
             if child.attrib['element'] == 'subject':
                 temp_data['subject'] = temp_data['subject'] + child.text + ", " if 'subject' in temp_data else child.text + ", "
+            if child.attrib['element'] == 'date' and child.attrib['qualifier'] == 'issued':
+                temp_data['date_issued'] = child.text
+            if child.attrib['element'] == 'format' and child.attrib['qualifier'] == 'none':
+                temp_data['format'] = temp_data['format'] + child.text + ", " if 'format' in temp_data else child.text + ", "
+            if child.attrib['element'] == 'type' and child.attrib['qualifier'] == 'none':
+                temp_data['type'] = child.text
+            if child.attrib['element'] == 'creator' and child.attrib['qualifier'] == 'none':
+                temp_data['creator'] = child.text
+            if child.attrib['element'] == 'description' and child.attrib['qualifier'] == 'none':
+                temp_data['description'] = child.text
         data[data_id]['salt_metadata'] = temp_data
         f.seek(0)        
         json.dump(data, f, ensure_ascii=False, indent=4)
@@ -56,9 +74,11 @@ def find_search_keywords(data_id):
     with open('data.json', 'r') as f:
         f.seek(0)
         data = json.load(f)
-        words = [x.strip() for x in data[data_id]['salt_metadata']['title'].replace('-', '').replace(',', '').split()]
+        words = [x.strip() for x in data[data_id]['salt_metadata']['title'].replace('-', '').split()]
         keyword = ''
         for i in range(len(words)):
+            if "," in words[i]:
+                words[i] = words[i].split("'")[0]
             if "'" in words[i]:
                 words[i] = words[i].split("'")[0]
             if "’" in words[i]:
@@ -67,6 +87,8 @@ def find_search_keywords(data_id):
                 if keyword:
                     keyword = keyword + ' '
                 keyword += words[i]
+            elif words[i][0] == "(":
+                pass
             else:
                 if (keyword and i > 1) and keyword not in keywords:
                     keywords.append(keyword)
