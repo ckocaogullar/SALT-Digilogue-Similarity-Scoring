@@ -8,6 +8,7 @@
 
 import json
 import random
+import re
 
 # Coefficients of each similarity category as documented 
 a_G = 1
@@ -29,9 +30,9 @@ def main():
         else:
             similarity_data = dict()
         for data_id1 in data_ids:
-            top_100_search = {-1: -1}
+            top_100_search = {-1: (-1, ())}
             min_search_score = (-1, -1)
-            top_100_salt_metadata = {-1: -1}
+            top_100_salt_metadata = {-1: (-1, ())}
             min_salt_metadata_score = (-1, -1)
             for data_id2 in data_ids:
                 if not data_id1 == data_id2:
@@ -39,10 +40,13 @@ def main():
                         similarity_data[data_id1] = dict()
                     # if data_id2 not in similarity_data[data_id1].keys():
                     #     similarity_data[data_id1][data_id2] = dict()
-                    min_search_score = adjust_top_100_score(data_id2, top_100_search, score_search_res(data_id1, data_id2, data), min_search_score)
-                    min_salt_metadata_score = adjust_top_100_score(data_id2, top_100_salt_metadata, score_search_res(data_id1, data_id2, data), min_salt_metadata_score)
+                    search_score, search_intersection = score_results('search_res', data_id1, data_id2, data)
+                    salt_metadata_score, salt_metadata_intersection = score_results('salt_metadata', data_id1, data_id2, data)
+                    min_search_score = adjust_top_100_score(data_id2, top_100_search, search_intersection, search_score, min_search_score)
+                    min_salt_metadata_score = adjust_top_100_score(data_id2, top_100_salt_metadata, salt_metadata_intersection, salt_metadata_score, min_salt_metadata_score)
             similarity_data[data_id1]['search_res'] = top_100_search
             similarity_data[data_id1]['salt_metadata'] = top_100_salt_metadata
+            print(similarity_data[data_id1])
         ## OVERALL SCORING
         # for data_id1 in data_ids:
         #     for data_id2 in data_ids:
@@ -52,14 +56,13 @@ def main():
         json.dump(similarity_data, f, ensure_ascii=False, indent=4)
         f.truncate()
 
-def adjust_top_100_score(data_id, top_100_scores, score, min_score):
+def adjust_top_100_score(data_id, top_100_scores, search_intersection, score, min_score):
     if len(top_100_scores) < 100:
-            top_100_scores[data_id] = score
+            top_100_scores[data_id] = (score, search_intersection)
     elif score > min_score[1]:
-            print(top_100_scores)
             del top_100_scores[min_score[0]]
-            top_100_scores[data_id] = score
-    min_s = min(top_100_scores.values())
+            top_100_scores[data_id] = (score, search_intersection)
+    min_s = min([x[0] for x in top_100_scores.values()])
     min_score = (get_key(top_100_scores, min_s), min_s)
     return min_score
 
@@ -72,25 +75,49 @@ def score_overall(data_id1, data_id2, data):
     U = data[data_id1][data_id2]['user_connection']
     return a_G * G + a_V * V + a_C * C + a_T * T + a_U * U
 
-# Calculates Search/Knowlege API based Connection (G) similarity score by taking the 
+# Calculates Search/Knowlege API based Connection (G) or Calculates SALT Tagging based (T) similarity score by taking the 
 # common words occuring in the search results of a couple of items
-def score_search_res(data_id1, data_id2, data):
-    search_res1 = set(prepare_word_comparison('search_res', data_id1, data))
-    search_res2 = set(prepare_word_comparison('search_res', data_id2, data))
+def score_results(res_type, data_id1, data_id2, data):
+    search_res1 = set(prepare_word_comparison(res_type, data_id1, data))
+    search_res2 = set(prepare_word_comparison(res_type, data_id2, data))
     total_words = len(search_res1) + len(search_res2)
-    return 0 if total_words == 0 else len(search_res1.intersection(search_res2)) / total_words
+    intersection = get_word_intersection(search_res1, search_res2)
+    return 0 if total_words == 0 else len(intersection) / total_words, intersection
 
-# Calculates SALT Tagging based (T) similarity score by taking the 
-# common words occuring in the search results of a couple of items
-def score_salt_metadata(data_id1, data_id2, data):
-    salt_metadata1 = set(prepare_word_comparison('salt_metadata', data_id1, data))
-    salt_metadata2 = set(prepare_word_comparison('salt_metadata', data_id2, data))
-    total_words = len(salt_metadata1) + len(salt_metadata2)
-    return 0 if total_words == 0 else len(salt_metadata1.intersection(salt_metadata2)) / total_words
+def get_word_intersection(res1, res2):
+    intersection = list()
+    for item1 in res1:
+        for item2 in res2:
+            if item1 in item2:
+                intersection.append(item1)
+                if item1 != item2:
+                    intersection.append(item2)
+    return intersection
 
 # Splits sentences into words to prepare them for Search/Knowlege API based Connection (G) / SALT Tagging 
 # based (T) comparison
 def prepare_word_comparison(tag, data_id, data):
+    prepared = []
+    if tag in data[data_id].keys():
+        for key in data[data_id][tag]:
+            if isinstance(data[data_id][tag][key], list):
+                for item in data[data_id][tag][key]:
+                    #item = item.replace('|', '').replace(',', '').split('-').strip()
+                    for i in re.split(',|-', item):
+                        i = i.replace('\|', '').replace(',', '').strip()
+                        if i not in prepared and item != '':
+                            prepared.append(item)
+            elif key != 'title' and key!= 'description':
+                items = [x.replace('\|', '').replace(',', '').strip() for x in re.split(',|-|:', data[data_id][tag][key])]
+                for item in items:
+                    if item not in prepared and item != '':
+                        if key == 'format' and item[0].isnumeric():
+                            pass
+                        else:
+                            prepared.append(item)
+    return prepared
+
+def prepare_salt_metadata_word_comparison(tag, data_id, data):
     prepared = []
     if tag in data[data_id].keys():
         for key in data[data_id][tag]:
@@ -103,7 +130,7 @@ def prepare_word_comparison(tag, data_id, data):
 
 def get_key(my_dict, val): 
     for key, value in my_dict.items(): 
-         if val == value: 
+         if val == value[0]: 
              return key 
   
     return "key doesn't exist"

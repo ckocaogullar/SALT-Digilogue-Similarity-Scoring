@@ -74,7 +74,8 @@ def find_search_keywords(data_id):
     with open('data.json', 'r') as f:
         f.seek(0)
         data = json.load(f)
-        words = [x.strip() for x in data[data_id]['salt_metadata']['title'].replace('-', '').split()]
+        words = [x.strip() for x in data[data_id]['salt_metadata']['title'].replace(',', '').split('-')[0].split()]
+        #words = [x.strip() for x in "Nesrin Bağana, Müzdan Arel, Hakkı Said Tez ve muhtemelen Fatma Semiramis Kocainan ile Güzin Kocabaş'ın çektirdikleri boy fotoğrafı".split('-')[0].split()]
         keyword = ''
         for i in range(len(words)):
             if "," in words[i]:
@@ -87,19 +88,27 @@ def find_search_keywords(data_id):
                 if keyword:
                     keyword = keyword + ' '
                 keyword += words[i]
+                if "," in words[i]:
+                    words[i] = words[i].replace(",", "")
+                    if keyword and keyword not in keywords:
+                        keywords.append(keyword)
+                    keyword = ''
             elif words[i][0] == "(":
                 pass
             else:
-                if (keyword and i > 1) and keyword not in keywords:
+                if (keyword and i >= 1) and keyword not in keywords:
                     keywords.append(keyword)
                 keyword = ''
+        if 'subject' in data[data_id]['salt_metadata'].keys():
+            keywords += [x.strip() for x in data[data_id]['salt_metadata']['subject'].split(',')]
+        while '' in keywords: keywords.remove('')
+        print(f'hello {keywords}')
         return keywords
 
 # Performs a search using a Wikidata API and returns the results
 def cumulative_search(data_id):
     categories = dict()
     keywords = find_search_keywords(data_id)
-    print(keywords)
     for keyword in keywords:
         try:
             page = wptools.page(keyword, lang='tr')
