@@ -88,9 +88,9 @@ def get_word_intersection(res1, res2):
     intersection = list()
     for item1 in res1:
         for item2 in res2:
-            if item1 in item2:
+            if item1 in item2 and item1 not in intersection:
                 intersection.append(item1)
-                if item1 != item2:
+                if item1 != item2 and item2 not in intersection:
                     intersection.append(item2)
     return intersection
 
